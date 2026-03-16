@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Intermittent Fasting Blueprint — Lose Weight & Reset Your Body in 30 Days</title>
+  <meta name="description" content="The complete IF guide for beginners. Lose 8–15 lbs in 30 days without counting calories. Just timing. $4.99." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#f7f3ee',
+            espresso: '#1a0f0a',
+            sienna: '#c4622d',
+            'sienna-dark': '#a8521f',
+            sage: '#7a9e7e',
+            'sage-light': '#e8f0e9',
+            'warm-white': '#fefcfa',
+            'warm-gray': '#e8e0d8',
+          },
+          fontFamily: {
+            playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #f7f3ee;
+      color: #1a0f0a;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Paper grain texture */
+    .paper-grain {
+      position: relative;
+    }
+    .paper-grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+
+    /* CSS blob */
+    .blob {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: blob-morph 12s ease-in-out infinite;
+    }
+    @keyframes blob-morph {
+      0%,100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      25%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+      50%      { border-radius: 50% 60% 30% 60% / 30% 40% 70% 60%; }
+      75%      { border-radius: 40% 70% 60% 30% / 70% 30% 50% 60%; }
+    }
+
+    /* Diagonal divider */
+    .diagonal-section {
+      position: relative;
+      background: #1a0f0a;
+      clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+      padding: 6rem 0;
+    }
+
+    /* Scroll fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* FAQ accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+    .faq-chevron.open {
+      transform: rotate(180deg);
+    }
+
+    /* Playfair headlines */
+    .headline { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* Sienna CTA button */
+    .btn-primary {
+      background: #c4622d;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 1rem 2.25rem;
+      border-radius: 9999px;
+      display: inline-block;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(196, 98, 45, 0.35);
+    }
+    .btn-primary:hover {
+      background: #a8521f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(196, 98, 45, 0.45);
+    }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* Chapter cards */
+    .chapter-card {
+      background: #fefcfa;
+      border-left: 3px solid #c4622d;
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .chapter-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.4;
+      mix-blend-mode: multiply;
+    }
+    .chapter-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(26,15,10,0.10);
+    }
+
+    /* Stat cards */
+    .stat-card {
+      background: #fefcfa;
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 16px rgba(26,15,10,0.07);
+      border: 1px solid #e8e0d8;
+    }
+
+    /* Protocol bars */
+    .protocol-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+      width: 0;
+    }
+    .protocol-bar-fill.animated {
+      /* width set via inline style when animated */
+    }
+
+    /* Testimonial */
+    .testimonial-card {
+      background: #fefcfa;
+      border-radius: 20px;
+      padding: 2rem 2rem 1.75rem;
+      box-shadow: 0 2px 16px rgba(26,15,10,0.06);
+      border: 1px solid #e8e0d8;
+    }
+
+    /* Checklist item */
+    .check-item::before {
+      content: '✓';
+      color: #7a9e7e;
+      font-weight: 700;
+      margin-right: 0.6rem;
+      font-size: 1rem;
+    }
+
+    /* Responsive hero headline */
+    @media (max-width: 640px) {
+      .hero-headline { font-size: 2.5rem !important; line-height: 1.15 !important; }
+    }
+  </style>
+</head>
+<body class="bg-cream">
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION (minimal)
+════════════════════════════════════════════════ -->
+<nav class="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-warm-gray/60">
+  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <span class="headline font-semibold text-espresso text-lg tracking-tight">IF Blueprint</span>
+    <a href="#gumroad-link" class="btn-primary text-sm py-2.5 px-5">Get It — $4.99</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     1. HERO
+════════════════════════════════════════════════ -->
+<section class="paper-grain relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28">
+  <div class="relative z-10 max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left: copy -->
+    <div class="md:pr-8">
+      <!-- Eyebrow badge -->
+      <div class="inline-flex items-center gap-2 bg-sage-light text-sage font-semibold text-sm px-4 py-1.5 rounded-full mb-7 border border-sage/20">
+        <span class="w-2 h-2 bg-sage rounded-full inline-block"></span>
+        The #1 Weight Loss Method of 2025
+      </div>
+
+      <!-- Headline -->
+      <h1 class="headline hero-headline text-espresso font-black leading-tight mb-6" style="font-size:3.5rem; line-height:1.1;">
+        Your body already knows<br />
+        <em class="italic font-normal" style="color:#1a0f0a;">how to heal itself.</em><br />
+        <span style="font-size:0.9em;">You just need to stop<br class="hidden sm:block" /> eating for a few hours.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-espresso/70 text-lg leading-relaxed mb-9 max-w-xl" style="font-size:1.1rem;">
+        The complete IF guide for beginners. Lose <strong class="text-espresso font-semibold">8–15 lbs in 30 days</strong> without counting calories or killing yourself at the gym. Just timing.
+      </p>
+
+      <!-- CTA -->
+      <div class="mb-8">
+        <a href="#gumroad-link" class="btn-primary text-base px-8 py-4">
+          Get The Blueprint — $4.99
+        </a>
+      </div>
+
+      <!-- Trust row -->
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-espresso/60 font-medium">
+        <span>⭐ 4.9/5 from 2,400+ readers</span>
+        <span class="hidden sm:inline text-warm-gray">|</span>
+        <span>📄 Instant PDF</span>
+        <span class="hidden sm:inline text-warm-gray">|</span>
+        <span>🛡️ 7-day guarantee</span>
+      </div>
+    </div>
+
+    <!-- Right: blob decoration -->
+    <div class="hidden md:flex items-center justify-center">
+      <div class="relative w-80 h-80">
+        <!-- Large blob -->
+        <div class="blob absolute inset-0 bg-sage/20" style="border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;"></div>
+        <!-- Inner blob -->
+        <div class="blob absolute inset-10 bg-sage/30" style="border-radius:40% 60% 70% 30% / 50% 60% 30% 60%; animation-delay:-4s;"></div>
+        <!-- Center content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+          <div class="headline text-6xl font-black text-sage/60 leading-none mb-1">30</div>
+          <div class="text-sage text-lg font-semibold">days</div>
+          <div class="w-8 h-px bg-sage/40 my-3"></div>
+          <div class="headline text-4xl font-bold text-sage/50 leading-none mb-1">8–15</div>
+          <div class="text-sage text-sm font-medium">lbs lost</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     2. THE SCIENCE
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-warm-white" id="science">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <div class="mb-12 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-3">Backed by research</div>
+      <h2 class="headline text-espresso font-bold leading-tight" style="font-size:2.6rem;">This isn't a diet.<br /><em class="italic font-normal">It's biology.</em></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-8 fade-in">
+
+      <div class="stat-card">
+        <div class="headline text-sienna font-black mb-2" style="font-size:2.2rem;">16h</div>
+        <div class="font-semibold text-espresso text-base mb-2">Autophagy activates</div>
+        <p class="text-espresso/60 text-sm leading-relaxed">After 16 hours of fasting, your cells trigger autophagy — a deep self-cleaning process that removes damaged proteins and cellular debris.</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="headline text-sienna font-black mb-2" style="font-size:2.2rem;">↓31%</div>
+        <div class="font-semibold text-espresso text-base mb-2">Insulin drops</div>
+        <p class="text-espresso/60 text-sm leading-relaxed">Fasting reduces insulin levels by 20–31%. When insulin falls, fat cells unlock and your body switches to burning stored fat for fuel.</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="headline text-sienna font-black mb-2" style="font-size:2.2rem;">5×</div>
+        <div class="font-semibold text-espresso text-base mb-2">HGH increases</div>
+        <p class="text-espresso/60 text-sm leading-relaxed">Human growth hormone surges up to 5x during fasting windows — preserving lean muscle while targeting fat stores specifically.</p>
+      </div>
+
+    </div>
+
+    <p class="text-espresso/40 text-xs italic fade-in">Based on peer-reviewed research including studies published in NEJM, Cell Metabolism, and the Journal of Clinical Endocrinology.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     3. PAIN SECTION (diagonal)
+════════════════════════════════════════════════ -->
+<section class="diagonal-section" id="pain">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <div class="mb-10 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-4">Be honest with yourself</div>
+      <h2 class="headline text-white font-bold leading-tight" style="font-size:2.6rem;">Sound familiar?</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-12 fade-in">
+      <!-- Pain cards -->
+      <div class="flex items-start gap-4 bg-white/5 rounded-2xl p-5 border border-white/10">
+        <span class="w-8 h-8 rounded-full bg-sienna/20 text-sienna flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">✕</span>
+        <p class="text-white/80 leading-relaxed">You've tried cutting carbs, counting calories, drinking celery juice... and none of it stuck longer than three weeks.</p>
+      </div>
+      <div class="flex items-start gap-4 bg-white/5 rounded-2xl p-5 border border-white/10">
+        <span class="w-8 h-8 rounded-full bg-sienna/20 text-sienna flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">✕</span>
+        <p class="text-white/80 leading-relaxed">You lose 5 lbs, feel amazing — then gain 7 back the moment you stop. The cycle is exhausting and demoralizing.</p>
+      </div>
+      <div class="flex items-start gap-4 bg-white/5 rounded-2xl p-5 border border-white/10">
+        <span class="w-8 h-8 rounded-full bg-sienna/20 text-sienna flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">✕</span>
+        <p class="text-white/80 leading-relaxed">You don't have time for complicated meal plans, food prep Sundays, and gym routines that demand 5 days a week.</p>
+      </div>
+      <div class="flex items-start gap-4 bg-white/5 rounded-2xl p-5 border border-white/10">
+        <span class="w-8 h-8 rounded-full bg-sienna/20 text-sienna flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">✕</span>
+        <p class="text-white/80 leading-relaxed">You've been told "just eat less" — as if willpower alone is the solution. As if you haven't already tried that a hundred times.</p>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <p class="headline text-white text-2xl font-semibold italic text-center">IF is different. Here's why it actually works.</p>
+      <div class="flex justify-center mt-5">
+        <div class="w-8 h-8 bg-sienna rounded-full flex items-center justify-center text-white">↓</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     4. WHAT'S INSIDE
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-cream" id="inside">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <div class="mb-12 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-3">Inside the guide</div>
+      <h2 class="headline text-espresso font-bold leading-tight" style="font-size:2.6rem;">What you're getting<br /><em class="italic font-normal">for $4.99</em></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 fade-in">
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 1</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">12 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">The IF Foundation</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">What intermittent fasting actually is, how it works hormonally, and why your body responds to it differently than any diet you've tried.</p>
+      </div>
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 2</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">15 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">Your 30-Day Protocol</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">Week-by-week schedule. Day 1 through Day 30, with exactly what to do, when to eat, and how to adjust if life gets in the way.</p>
+      </div>
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 3</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">10 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">Breaking the Fast Right</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">The foods that maximize your fasting results, what breaks a fast vs. what doesn't, and how to structure your eating window without obsessing.</p>
+      </div>
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 4</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">8 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">Managing Hunger & Energy</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">Why hunger peaks and fades in cycles, the strategies to move through it, and how to maintain energy and mental clarity in your fasted state.</p>
+      </div>
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 5</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">9 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">IF for Real Life</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">Social events, travel, weekends, stress days — how to keep your protocol intact without being the person who won't eat at dinner.</p>
+      </div>
+
+      <div class="chapter-card">
+        <div class="flex items-start justify-between gap-4 mb-2">
+          <div class="text-xs font-bold tracking-widest uppercase text-sienna/70">Chapter 6</div>
+          <span class="text-xs bg-cream text-espresso/50 font-medium px-2.5 py-1 rounded-full border border-warm-gray whitespace-nowrap">11 min read</span>
+        </div>
+        <h3 class="headline font-semibold text-espresso text-lg mb-1">Beyond 30 Days</h3>
+        <p class="text-espresso/60 text-sm leading-relaxed">How to make IF a permanent lifestyle — cycling protocols, building in flexibility, and what to do when you hit a plateau after the first month.</p>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center fade-in">
+      <a href="#gumroad-link" class="btn-primary px-8 py-4 text-base">Get All 6 Chapters — $4.99</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     5. THE PROTOCOLS
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-warm-white" id="protocols">
+  <div class="max-w-5xl mx-auto px-5">
+
+    <div class="mb-12 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-3">Choose your approach</div>
+      <h2 class="headline text-espresso font-bold leading-tight" style="font-size:2.6rem;">Three protocols.<br /><em class="italic font-normal">One right fit for you.</em></h2>
+      <p class="text-espresso/60 mt-4 max-w-lg text-base leading-relaxed">The Blueprint walks you through all three, with guidance on which to start with based on your schedule, lifestyle, and goals.</p>
+    </div>
+
+    <div class="space-y-8 fade-in" id="protocol-bars">
+
+      <!-- 16:8 -->
+      <div class="bg-cream rounded-2xl p-6 border border-warm-gray">
+        <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="headline text-espresso font-bold text-2xl">16:8</span>
+              <span class="bg-sage-light text-sage text-xs font-semibold px-2.5 py-1 rounded-full border border-sage/20">Most Popular</span>
+              <span class="bg-sage-light text-sage text-xs font-semibold px-2.5 py-1 rounded-full border border-sage/20">Beginner-Friendly</span>
+            </div>
+            <p class="text-espresso/60 text-sm">Fast 16 hours · Eat in an 8-hour window</p>
+          </div>
+          <div class="text-right">
+            <div class="headline text-sienna font-bold text-xl">85%</div>
+            <div class="text-xs text-espresso/40">of readers start here</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-warm-gray rounded-full h-3 overflow-hidden">
+            <div class="protocol-bar-fill bg-sage rounded-full h-3" data-width="85%"></div>
+          </div>
+          <span class="text-sm text-espresso/50 font-medium whitespace-nowrap">16h fast / 8h eat</span>
+        </div>
+        <p class="text-espresso/50 text-xs mt-3">Example: Stop eating at 8pm. Skip breakfast. Eat 12pm–8pm. Done.</p>
+      </div>
+
+      <!-- 18:6 -->
+      <div class="bg-cream rounded-2xl p-6 border border-warm-gray">
+        <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="headline text-espresso font-bold text-2xl">18:6</span>
+              <span class="bg-amber-50 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-200">Intermediate</span>
+            </div>
+            <p class="text-espresso/60 text-sm">Fast 18 hours · Eat in a 6-hour window</p>
+          </div>
+          <div class="text-right">
+            <div class="headline font-bold text-xl text-amber-600">Stronger results</div>
+            <div class="text-xs text-espresso/40">typically week 3–4</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-warm-gray rounded-full h-3 overflow-hidden">
+            <div class="protocol-bar-fill rounded-full h-3" style="background:#d97706;" data-width="65%"></div>
+          </div>
+          <span class="text-sm text-espresso/50 font-medium whitespace-nowrap">18h fast / 6h eat</span>
+        </div>
+        <p class="text-espresso/50 text-xs mt-3">A natural progression once 16:8 feels effortless. Deeper fat burn, more autophagy.</p>
+      </div>
+
+      <!-- 5:2 -->
+      <div class="bg-cream rounded-2xl p-6 border border-warm-gray">
+        <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="headline text-espresso font-bold text-2xl">5:2</span>
+              <span class="bg-warm-gray/60 text-espresso/60 text-xs font-semibold px-2.5 py-1 rounded-full border border-warm-gray">Alternative</span>
+            </div>
+            <p class="text-espresso/60 text-sm">Eat normally 5 days · 500 cal on 2 days</p>
+          </div>
+          <div class="text-right">
+            <div class="headline text-espresso/60 font-bold text-xl">Flexible</div>
+            <div class="text-xs text-espresso/40">for irregular schedules</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-warm-gray rounded-full h-3 overflow-hidden">
+            <div class="protocol-bar-fill bg-espresso/30 rounded-full h-3" data-width="45%"></div>
+          </div>
+          <span class="text-sm text-espresso/50 font-medium whitespace-nowrap">2 days restricted</span>
+        </div>
+        <p class="text-espresso/50 text-xs mt-3">Great for those who travel frequently or can't commit to daily fasting windows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     6. SOCIAL PROOF
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-cream" id="reviews">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <div class="mb-12 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-3">Reader results</div>
+      <h2 class="headline text-espresso font-bold leading-tight" style="font-size:2.6rem;">2,400+ people who<br /><em class="italic font-normal">didn't give up this time.</em></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 fade-in">
+
+      <div class="testimonial-card">
+        <div class="headline text-sienna font-black mb-4 leading-none" style="font-size:4rem; line-height:0.8;">"</div>
+        <p class="text-espresso/80 leading-relaxed mb-6 text-base">Lost 11 lbs in 5 weeks. I eat what I want in my window — pasta, wine, the whole thing. I stopped overthinking food for the first time in years.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-warm-gray">
+          <div class="w-9 h-9 rounded-full bg-sage-light flex items-center justify-center text-sage font-bold text-sm">E</div>
+          <div>
+            <div class="font-semibold text-espresso text-sm tracking-wide uppercase" style="font-size:0.75rem; letter-spacing:0.08em;">Emma R., 34</div>
+            <div class="text-xs text-espresso/40">⭐⭐⭐⭐⭐ Verified reader</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="headline text-sienna font-black mb-4 leading-none" style="font-size:4rem; line-height:0.8;">"</div>
+        <p class="text-espresso/80 leading-relaxed mb-6 text-base">My energy is insane. No more 3pm crash, no more needing coffee just to function after lunch. I feel sharp all day. The weight loss was a bonus.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-warm-gray">
+          <div class="w-9 h-9 rounded-full bg-sage-light flex items-center justify-center text-sage font-bold text-sm">D</div>
+          <div>
+            <div class="font-semibold text-espresso text-sm tracking-wide uppercase" style="font-size:0.75rem; letter-spacing:0.08em;">Daniel W., 41</div>
+            <div class="text-xs text-espresso/40">⭐⭐⭐⭐⭐ Verified reader</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="headline text-sienna font-black mb-4 leading-none" style="font-size:4rem; line-height:0.8;">"</div>
+        <p class="text-espresso/80 leading-relaxed mb-6 text-base">I've tried everything — keto, Noom, personal trainer, the works. This is the only thing that stuck. It fits into my actual life. I'm down 19 lbs total.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-warm-gray">
+          <div class="w-9 h-9 rounded-full bg-sage-light flex items-center justify-center text-sage font-bold text-sm">M</div>
+          <div>
+            <div class="font-semibold text-espresso text-sm tracking-wide uppercase" style="font-size:0.75rem; letter-spacing:0.08em;">Mia S., 28</div>
+            <div class="text-xs text-espresso/40">⭐⭐⭐⭐⭐ Verified reader</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     7. ABOUT THE EBOOK
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-warm-white" id="about">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: text -->
+      <div class="fade-in">
+        <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-4">About this guide</div>
+        <h2 class="headline text-espresso font-bold leading-tight mb-6" style="font-size:2.4rem;">No fluff. No supplements. <em class="italic font-normal">Just what works.</em></h2>
+        <p class="text-espresso/70 leading-relaxed mb-5 text-base">The IF Blueprint was written for people who've already tried the complicated stuff and want something that actually fits into a real life — not a fitness influencer's carefully curated one.</p>
+        <p class="text-espresso/70 leading-relaxed mb-8 text-base">No supplements. No expensive meal kits. No gym required. Just a proven schedule and the science to back it up — explained in plain English, not a PhD thesis.</p>
+        <a href="#gumroad-link" class="btn-primary px-7 py-3.5">Get The Blueprint — $4.99</a>
+      </div>
+
+      <!-- Right: checklist -->
+      <div class="fade-in">
+        <div class="bg-cream rounded-2xl p-7 border border-warm-gray">
+          <div class="text-xs font-semibold tracking-widest uppercase text-espresso/40 mb-5">What you get</div>
+          <ul class="space-y-3.5 text-espresso/80 text-base">
+            <li class="check-item">65-page complete beginner guide</li>
+            <li class="check-item">30-day day-by-day schedule</li>
+            <li class="check-item">3 protocol options with guidance</li>
+            <li class="check-item">Hunger management strategies</li>
+            <li class="check-item">Social eating & travel playbook</li>
+            <li class="check-item">Long-term maintenance framework</li>
+            <li class="check-item">Instant PDF download</li>
+            <li class="check-item">7-day money-back guarantee</li>
+          </ul>
+          <div class="mt-6 pt-5 border-t border-warm-gray flex items-baseline gap-3">
+            <span class="headline text-espresso font-black text-3xl">$4.99</span>
+            <span class="text-espresso/40 text-sm line-through">$19</span>
+            <span class="bg-sienna/10 text-sienna text-xs font-semibold px-2.5 py-1 rounded-full">74% off</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     8. FAQ
+════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-cream" id="faq">
+  <div class="max-w-3xl mx-auto px-5">
+
+    <div class="mb-12 fade-in">
+      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-3">Common questions</div>
+      <h2 class="headline text-espresso font-bold leading-tight" style="font-size:2.4rem;">You probably have<br /><em class="italic font-normal">these questions.</em></h2>
+    </div>
+
+    <div class="space-y-3 fade-in" id="faq-list">
+
+      <div class="faq-item bg-warm-white rounded-2xl border border-warm-gray overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" aria-expanded="false">
+          <span class="font-semibold text-espresso text-base">Will I feel hungry all the time?</span>
+          <svg class="faq-chevron w-5 h-5 text-espresso/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-espresso/65 leading-relaxed pb-5 text-sm">The first 3–5 days are the hardest. Your body is used to expecting food at certain times — that's conditioning, not actual hunger. Once you adapt (usually by day 7), most people report the hunger waves pass in 20–30 minutes and disappear almost entirely by week two. The Blueprint includes specific strategies for the adaptation period.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-warm-white rounded-2xl border border-warm-gray overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" aria-expanded="false">
+          <span class="font-semibold text-espresso text-base">Can I drink coffee during the fast?</span>
+          <svg class="faq-chevron w-5 h-5 text-espresso/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-espresso/65 leading-relaxed pb-5 text-sm">Yes — black coffee and plain tea are fasting-safe. They contain no calories and don't trigger an insulin response. In fact, caffeine can mildly enhance the fat-burning effect. The one rule: nothing with calories. No milk, no sugar, no oat milk lattes. The guide covers exactly what breaks a fast and what doesn't.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-warm-white rounded-2xl border border-warm-gray overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" aria-expanded="false">
+          <span class="font-semibold text-espresso text-base">Is this safe for women?</span>
+          <svg class="faq-chevron w-5 h-5 text-espresso/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-espresso/65 leading-relaxed pb-5 text-sm">For most healthy women, yes — and many women find IF particularly effective. However, the hormonal picture is more nuanced. The Blueprint includes a dedicated section on IF for women, covering cycle-syncing your fasting schedule, signs to back off the window, and why 16:8 is generally a safer starting point than more aggressive protocols for women specifically.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-warm-white rounded-2xl border border-warm-gray overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" aria-expanded="false">
+          <span class="font-semibold text-espresso text-base">Do I have to exercise?</span>
+          <svg class="faq-chevron w-5 h-5 text-espresso/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-espresso/65 leading-relaxed pb-5 text-sm">No. IF works without any exercise at all. Hundreds of the readers who've reported results were completely sedentary. That said, even light movement — a 20-minute walk — compounds the fat-burning effect. The guide covers optional exercise strategies, but none are required to see results in the 30 days.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-warm-white rounded-2xl border border-warm-gray overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" aria-expanded="false">
+          <span class="font-semibold text-espresso text-base">What if I mess up a day?</span>
+          <svg class="faq-chevron w-5 h-5 text-espresso/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-espresso/65 leading-relaxed pb-5 text-sm">You just start again the next day. IF doesn't have a restart button — it has a default state. One dinner out with family, one stressful day that wrecked the window — none of that undoes the hormonal and metabolic shift that's already happening. The protocol is designed with real life built in. Just show up tomorrow.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     9. FINAL CTA
+════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 bg-espresso relative overflow-hidden" id="cta">
+  <!-- Subtle blob decoration -->
+  <div class="absolute -top-20 -right-20 w-80 h-80 blob opacity-10" style="background:#7a9e7e;"></div>
+  <div class="absolute -bottom-20 -left-20 w-64 h-64 blob opacity-5" style="background:#c4622d; animation-delay:-6s;"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-in">
+    <div class="inline-block text-xs font-semibold tracking-widest uppercase text-sage mb-6">One decision. 30 days.</div>
+    <h2 class="headline text-white font-black leading-tight mb-6" style="font-size:2.8rem;">Your body can do this.<br /><em class="italic font-normal text-sage">You just need the roadmap.</em></h2>
+    <p class="text-white/60 text-lg leading-relaxed mb-10 max-w-xl mx-auto">Everything you need to start, sustain, and succeed with intermittent fasting — in one 65-page guide, for less than a coffee.</p>
+    <a href="#gumroad-link" class="btn-primary text-lg px-10 py-5">
+      Start Your 30-Day Reset — $4.99
+    </a>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/40 font-medium">
+      <span>⭐ 4.9/5 from 2,400+ readers</span>
+      <span>·</span>
+      <span>Instant PDF download</span>
+      <span>·</span>
+      <span>7-day money-back guarantee</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="bg-espresso border-t border-white/10 py-8">
+  <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/30">
+    <span class="headline font-semibold text-white/50">IF Blueprint</span>
+    <span>© 2025 · All rights reserved</span>
+    <div class="flex gap-5">
+      <a href="#" class="hover:text-white/60 transition-colors">Privacy</a>
+      <a href="#" class="hover:text-white/60 transition-colors">Terms</a>
+      <a href="#" class="hover:text-white/60 transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════ -->
+<script>
+  // Scroll fade-in
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+        observer.unobserve(el.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Protocol bar animations
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.protocol-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const protocolSection = document.getElementById('protocol-bars');
+  if (protocolSection) barObserver.observe(protocolSection);
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = answer.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.faq-trigger').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      // Open clicked (if was closed)
+      if (!isOpen) {
+        answer.classList.add('open');
+        chevron.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

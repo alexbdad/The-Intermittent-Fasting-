@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Intermittent Fasting Blueprint — 30-Day Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  background: #e8e0d8;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #1a0f0a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── PAGE ─────────────────────────────────────────────── */
+.page {
+  background: #f7f3ee;
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 60px;
+  min-height: 1056px;
+  position: relative;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+/* ─── TYPOGRAPHY ───────────────────────────────────────── */
+.font-playfair { font-family: 'Playfair Display', Georgia, serif; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: #1a0f0a; }
+p { line-height: 1.8; color: #1a0f0a; margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+ul, ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+li { line-height: 1.75; margin-bottom: 0.35rem; }
+
+/* ─── COVER ────────────────────────────────────────────── */
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 1056px;
+  padding: 60px;
+  position: relative;
+  background: #f7f3ee;
+  overflow: hidden;
+}
+.cover-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(122,158,126,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cover-botanical {
+  width: 200px;
+  height: 120px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.35;
+}
+.cover-badge {
+  display: inline-block;
+  border: 1.5px solid #7a9e7e;
+  color: #7a9e7e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  margin-bottom: 2.5rem;
+}
+.cover-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1a0f0a;
+  margin-bottom: 1rem;
+  max-width: 580px;
+}
+.cover-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #1a0f0a;
+  opacity: 0.65;
+  line-height: 1.6;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+}
+.cover-divider {
+  width: 60px;
+  height: 2px;
+  background: #c4622d;
+  margin: 0 auto 2.5rem;
+}
+.cover-edition {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1a0f0a;
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+.cover-url {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #c4622d;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 48px;
+  left: 0; right: 0;
+  text-align: center;
+}
+
+/* ─── TABLE OF CONTENTS ────────────────────────────────── */
+.toc-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid rgba(26,15,10,0.1);
+}
+.toc-section-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a9e7e;
+  margin-bottom: 0.75rem;
+  margin-top: 1.75rem;
+}
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+.toc-item .toc-label {
+  white-space: nowrap;
+  padding-right: 6px;
+  color: #1a0f0a;
+}
+.toc-item .toc-label strong {
+  color: #c4622d;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.toc-item .toc-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted rgba(26,15,10,0.2);
+  margin: 0 6px;
+  position: relative;
+  top: -3px;
+  min-width: 20px;
+}
+.toc-item .toc-page {
+  white-space: nowrap;
+  padding-left: 6px;
+  color: #1a0f0a;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+
+/* ─── CHAPTER HEADING ──────────────────────────────────── */
+.chapter-header {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid rgba(26,15,10,0.08);
+}
+.chapter-number-watermark {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 9rem;
+  font-weight: 900;
+  color: #c4622d;
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.chapter-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4622d;
+  margin-bottom: 0.6rem;
+}
+.chapter-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #1a0f0a;
+  margin-bottom: 0.5rem;
+}
+.chapter-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  color: #1a0f0a;
+  opacity: 0.55;
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+/* ─── SECTION HEADING ──────────────────────────────────── */
+h3.section-head {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1a0f0a;
+}
+h4.section-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a0f0a;
+}
+
+/* ─── CALLOUT BOXES ────────────────────────────────────── */
+.callout {
+  background: #ede8e1;
+  border-left: 3.5px solid #c4622d;
+  border-radius: 0 10px 10px 0;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.callout .callout-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c4622d;
+  margin-bottom: 0.4rem;
+}
+.callout p { font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.5rem; }
+.callout p:last-child { margin-bottom: 0; }
+.callout ul { margin-bottom: 0; }
+.callout li { font-size: 0.9rem; }
+
+.science-note {
+  background: rgba(122,158,126,0.08);
+  border-left: 3.5px solid #7a9e7e;
+  border-radius: 0 10px 10px 0;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.science-note .callout-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7a9e7e;
+  margin-bottom: 0.4rem;
+}
+.science-note p { font-size: 0.88rem; line-height: 1.75; margin-bottom: 0.4rem; }
+.science-note p:last-child { margin-bottom: 0; }
+
+/* ─── COMPARISON TABLE ─────────────────────────────────── */
+.protocol-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+}
+.protocol-table th {
+  background: rgba(122,158,126,0.15);
+  color: #1a0f0a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid rgba(122,158,126,0.3);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+.protocol-table td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid rgba(26,15,10,0.07);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.protocol-table tr:last-child td { border-bottom: none; }
+.protocol-table .td-protocol {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #c4622d;
+  white-space: nowrap;
+}
+.protocol-table .badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.badge-sage { background: rgba(122,158,126,0.15); color: #5a7e5e; }
+.badge-amber { background: rgba(217,119,6,0.1); color: #92611a; }
+.badge-neutral { background: rgba(26,15,10,0.08); color: #5a4a44; }
+
+/* ─── DAILY CHECKLIST ──────────────────────────────────── */
+.week-block {
+  margin-bottom: 1.75rem;
+}
+.week-label {
+  display: inline-block;
+  background: #c4622d;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed rgba(26,15,10,0.1);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before {
+  content: '☐';
+  color: #c4622d;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── PROBLEM-SOLUTION PAIRS ───────────────────────────── */
+.problem-solution {
+  margin-bottom: 1rem;
+}
+.problem-solution .problem {
+  background: rgba(196,98,45,0.08);
+  border-left: 3.5px solid #c4622d;
+  padding: 0.7rem 1rem;
+  border-radius: 0 6px 0 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a0f0a;
+}
+.problem-solution .solution {
+  background: #ede8e1;
+  border-left: 3.5px solid #c4622d;
+  padding: 0.7rem 1rem 0.75rem;
+  border-radius: 0 0 6px 0;
+  font-size: 0.88rem;
+  color: #1a0f0a;
+  line-height: 1.7;
+}
+
+/* ─── CHEAT SHEET ──────────────────────────────────────── */
+.cheat-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.cheat-card {
+  background: #ede8e1;
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+}
+.cheat-card .cheat-title {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c4622d;
+  margin-bottom: 0.65rem;
+}
+.cheat-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cheat-card ul li {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(26,15,10,0.07);
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.cheat-card ul li:last-child { border-bottom: none; }
+.cheat-card ul li .ci { flex-shrink: 0; color: #7a9e7e; font-weight: 700; }
+.cheat-card ul li .cx { flex-shrink: 0; color: #c4622d; font-weight: 700; }
+
+/* ─── BONUS HEADER ─────────────────────────────────────── */
+.bonus-header {
+  background: linear-gradient(135deg, #1a0f0a 0%, #2e1a10 100%);
+  color: #f7f3ee;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.bonus-header .bonus-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4622d;
+  margin-bottom: 0.4rem;
+}
+.bonus-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #f7f3ee;
+  margin-bottom: 0.3rem;
+}
+.bonus-header p {
+  color: rgba(247,243,238,0.6);
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* ─── INTRO / ABOUT STYLE ──────────────────────────────── */
+.intro-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid rgba(26,15,10,0.08);
+}
+.intro-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a9e7e;
+  margin-bottom: 0.6rem;
+}
+.intro-title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #1a0f0a;
+}
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #c4622d;
+  float: left;
+  line-height: 0.8;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+/* ─── SECTION DIVIDER ──────────────────────────────────── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+.section-divider span {
+  height: 1px;
+  flex: 1;
+  background: rgba(26,15,10,0.1);
+}
+.section-divider .divider-dot {
+  width: 5px; height: 5px;
+  background: #c4622d;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── PULL QUOTE ───────────────────────────────────────── */
+.pull-quote {
+  border-top: 2px solid #c4622d;
+  border-bottom: 2px solid #c4622d;
+  padding: 1.25rem 0;
+  margin: 2rem 0;
+  text-align: center;
+}
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: #1a0f0a;
+  margin: 0;
+}
+
+/* ─── STAT ROW ─────────────────────────────────────────── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-box {
+  background: #ede8e1;
+  border-radius: 10px;
+  padding: 1rem 0.9rem;
+  text-align: center;
+}
+.stat-box .stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #c4622d;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+.stat-box .stat-label {
+  font-size: 0.78rem;
+  color: #1a0f0a;
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+/* ─── PAGE FOOTER ──────────────────────────────────────── */
+.page-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: rgba(26,15,10,0.3);
+  font-family: 'DM Sans', sans-serif;
+  border-top: 1px solid rgba(26,15,10,0.08);
+  padding-top: 10px;
+}
+
+/* ─── PRINT STYLES ─────────────────────────────────────── */
+@media print {
+  body { background: #f7f3ee; }
+  .page {
+    box-shadow: none;
+    margin: 0;
+    max-width: 100%;
+    padding: 60px;
+    page-break-after: always;
+    min-height: unset;
+  }
+  .chapter-break { page-break-before: always; }
+  .no-break { page-break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  @page {
+    size: letter;
+    margin: 0;
+  }
+}
+
+/* ─── SCREEN NAV ───────────────────────────────────────── */
+@media screen {
+  .screen-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #1a0f0a;
+    color: #f7f3ee;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    font-size: 0.8rem;
+  }
+  .screen-nav .nav-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #f7f3ee;
+    font-size: 0.9rem;
+  }
+  .screen-nav a {
+    color: #c4622d;
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba(196,98,45,0.15);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.2s;
+    font-size: 0.78rem;
+  }
+  .screen-nav a:hover { background: rgba(196,98,45,0.28); }
+  body { padding-top: 44px; }
+}
+@media print {
+  .screen-nav { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- SCREEN NAVIGATION -->
+<nav class="screen-nav">
+  <span class="nav-title">IF Blueprint — Ebook</span>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(247,243,238,0.4);font-size:0.75rem;">Ctrl+P or ⌘P to export PDF</span>
+    <a href="#cover">↑ Top</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     COVER PAGE
+════════════════════════════════════════════════════ -->
+<div class="page cover-page" id="cover">
+
+  <!-- Botanical CSS illustration -->
+  <svg class="cover-botanical" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Stem -->
+    <path d="M100 110 Q100 80 100 55" stroke="#7a9e7e" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Left branches -->
+    <path d="M100 90 Q82 82 72 68" stroke="#7a9e7e" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M100 75 Q78 65 65 50" stroke="#7a9e7e" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M100 62 Q84 52 78 36" stroke="#7a9e7e" stroke-width="1" stroke-linecap="round"/>
+    <!-- Right branches -->
+    <path d="M100 90 Q118 82 128 68" stroke="#7a9e7e" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M100 75 Q122 65 135 50" stroke="#7a9e7e" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M100 62 Q116 52 122 36" stroke="#7a9e7e" stroke-width="1" stroke-linecap="round"/>
+    <!-- Leaves left -->
+    <ellipse cx="68" cy="64" rx="9" ry="5" transform="rotate(-40 68 64)" fill="#7a9e7e" opacity="0.5"/>
+    <ellipse cx="61" cy="46" rx="10" ry="5" transform="rotate(-50 61 46)" fill="#7a9e7e" opacity="0.4"/>
+    <ellipse cx="75" cy="32" rx="8" ry="4" transform="rotate(-30 75 32)" fill="#7a9e7e" opacity="0.35"/>
+    <!-- Leaves right -->
+    <ellipse cx="132" cy="64" rx="9" ry="5" transform="rotate(40 132 64)" fill="#7a9e7e" opacity="0.5"/>
+    <ellipse cx="139" cy="46" rx="10" ry="5" transform="rotate(50 139 46)" fill="#7a9e7e" opacity="0.4"/>
+    <ellipse cx="125" cy="32" rx="8" ry="4" transform="rotate(30 125 32)" fill="#7a9e7e" opacity="0.35"/>
+    <!-- Top flower -->
+    <circle cx="100" cy="50" r="5" fill="#c4622d" opacity="0.4"/>
+    <circle cx="100" cy="50" r="2.5" fill="#c4622d" opacity="0.6"/>
+    <!-- Small flowers on branches -->
+    <circle cx="65" cy="49" r="3" fill="#c4622d" opacity="0.3"/>
+    <circle cx="135" cy="49" r="3" fill="#c4622d" opacity="0.3"/>
+    <!-- Ground dots -->
+    <circle cx="80" cy="112" r="1.5" fill="#7a9e7e" opacity="0.3"/>
+    <circle cx="100" cy="114" r="2" fill="#7a9e7e" opacity="0.25"/>
+    <circle cx="120" cy="112" r="1.5" fill="#7a9e7e" opacity="0.3"/>
+    <!-- Horizontal line -->
+    <line x1="20" y1="110" x2="180" y2="110" stroke="#7a9e7e" stroke-width="0.8" opacity="0.3"/>
+  </svg>
+
+  <div class="cover-badge">30-Day Program · 2025 Edition</div>
+
+  <h1 class="cover-title font-playfair">
+    The Intermittent<br />Fasting Blueprint
+  </h1>
+
+  <div class="cover-divider"></div>
+
+  <p class="cover-subtitle">
+    Lose Weight, Reset Your Body &amp; Feel Unstoppable in 30 Days
+  </p>
+
+  <p class="cover-edition">A complete beginner's guide</p>
+
+  <p class="cover-url">yourwebsite.com</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TABLE OF CONTENTS
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="toc">
+  <h2 class="toc-title font-playfair">Contents</h2>
+
+  <div class="toc-section-label">Front Matter</div>
+
+  <div class="toc-item">
+    <span class="toc-label">Introduction — Why Everything You've Tried Has Failed</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">3</span>
+  </div>
+
+  <div class="toc-section-label">The Blueprint</div>
+
+  <div class="toc-item">
+    <span class="toc-label"><strong>01.</strong> The Science Behind Intermittent Fasting</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">5</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>02.</strong> Choosing Your IF Protocol</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">9</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>03.</strong> Your First 7 Days: The Adaptation Phase</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">13</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>04.</strong> What to Eat in Your Eating Window</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">17</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>05.</strong> Exercise &amp; IF: The Perfect Combination</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">21</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>06.</strong> Troubleshooting: When Things Go Wrong</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">25</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-label"><strong>07.</strong> The 30-Day Blueprint</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">29</span>
+  </div>
+
+  <div class="toc-section-label">Bonus Material</div>
+
+  <div class="toc-item">
+    <span class="toc-label">IF Cheat Sheet — Quick Reference Card</span>
+    <span class="toc-dots"></span>
+    <span class="toc-page">33</span>
+  </div>
+
+  <div class="page-footer">
+    <span>The Intermittent Fasting Blueprint</span>
+    <span>yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     INTRODUCTION
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="introduction">
+
+  <div class="intro-header">
+    <div class="intro-label">Introduction</div>
+    <h2 class="intro-title font-playfair">Why everything you've tried<br /><em>has failed (and why IF is different)</em></h2>
+  </div>
+
+  <p class="drop-cap">Let's be honest with each other from the start. You have probably tried to lose weight before. Maybe many times. You've cut carbs and felt terrible. You've downloaded calorie-counting apps and spent three weeks obsessing over every grape you ate. You've paid for a gym membership you used for eleven days. And somehow — every single time — you ended up back where you started, possibly heavier, and definitely more defeated.</p>
+
+  <p>That's not a willpower problem. That's a systems problem. And the system you've been handed — the one built around eating less, moving more, and white-knuckling your way through hunger — is broken by design.</p>
+
+  <h3 class="section-head">The calorie restriction trap</h3>
+
+  <p>When you eat less, your body adapts. It reads the caloric deficit as a threat — a potential famine — and responds by slowing your metabolism, increasing hunger hormones, and making you think about food constantly. This is evolution working against you. Your body is extraordinarily good at defending its fat stores. The harder you restrict, the louder those survival signals become. That's why 95% of calorie-restricted diets fail long term. You're fighting biology with willpower, and biology always wins.</p>
+
+  <h3 class="section-head">The real problem isn't what you eat — it's when</h3>
+
+  <p>Intermittent fasting doesn't ask you to count anything. It doesn't hand you a list of forbidden foods. It doesn't require you to eat six small meals a day or weigh your chicken breast to the gram. It works with a completely different mechanism: the timing of eating and the hormonal cascade that happens when you stop.</p>
+
+  <p>When you eat, your insulin rises. While insulin is elevated, your body cannot access stored fat — it's physiologically locked away. Most modern eating patterns keep insulin elevated nearly all day, from breakfast through late-night snacking. Fat burning barely happens. The moment you extend the time between your last meal and your first, insulin falls, and your body switches to burning fat as fuel. Not because you ate less. Because you gave it the time it needed to make the switch.</p>
+
+  <h3 class="section-head">What IF actually is (not starvation)</h3>
+
+  <p>Fasting is not starvation. Starvation is involuntary and chronic. Fasting is deliberate and temporary — and the human body evolved to handle it beautifully. Our ancestors went hours, sometimes days, without food. The metabolic machinery for fasting is hardwired into your biology. It's not extreme. It's a return to how humans have always lived, before food became available 24 hours a day at arm's reach.</p>
+
+  <p>This guide is not about suffering. It's not about restriction. It's about learning one simple skill: the ability to go a few hours without eating, and unlocking everything that happens to your body when you do. You're going to find it easier than you think. And the results — the sustained fat loss, the mental clarity, the energy — are going to feel different from anything you've tried before. Because this time, you're working <em>with</em> your body, not against it.</p>
+
+  <div class="pull-quote no-break">
+    <p>"You don't need a new diet. You need to understand how your body actually works — and then stop getting in its way."</p>
+  </div>
+
+  <p>The next 30 days will not be perfect. You'll miss a window. You'll have a dinner that runs long. You'll have a Tuesday that goes sideways. None of that matters as much as you think. IF is not fragile. It doesn't require perfection. It requires only consistency over time — and this guide gives you the exact roadmap to get there.</p>
+
+  <p>Let's begin.</p>
+
+  <div class="page-footer">
+    <span>Introduction</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 1 — THE SCIENCE
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter1">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">01</div>
+    <div class="chapter-label">Chapter One</div>
+    <h2 class="chapter-title font-playfair">The Science Behind<br />Intermittent Fasting</h2>
+    <p class="chapter-subtitle">What actually happens to your body — hour by hour</p>
+  </div>
+
+  <p class="drop-cap">Most people approach intermittent fasting as a diet trick. Something they heard about on a podcast, tried for a week, and either gave up on or swore by. But when you understand the biology behind it — when you see what's actually happening inside your cells during those fasting hours — it stops feeling like a trick and starts feeling like the most logical thing you could do for your body.</p>
+
+  <h3 class="section-head">Hour by hour: what happens when you stop eating</h3>
+
+  <p>The timeline begins the moment your last meal is digested. Here's what unfolds:</p>
+
+  <p><strong>Hours 0–4:</strong> Your body digests your last meal. Insulin is elevated. Glucose is being used for energy. Fat storage is active. Nothing unusual yet.</p>
+
+  <p><strong>Hours 4–8:</strong> Blood sugar begins to normalize. Insulin starts falling. Your liver begins depleting its glycogen (stored glucose) reserves. This is the transition zone.</p>
+
+  <p><strong>Hours 8–12:</strong> Glycogen stores are significantly depleted. Insulin is now low. Your body begins producing more fatty acids from adipose tissue. Fat burning begins to accelerate.</p>
+
+  <p><strong>Hours 12–16:</strong> You're in a genuine fasted state. Insulin is at its lowest. Growth hormone begins to rise. Your body is now burning primarily fat for fuel.</p>
+
+  <p><strong>Hours 16+:</strong> Autophagy activates — the cellular "self-cleaning" process. This is the sweet spot for most 16:8 practitioners and where the deeper metabolic benefits begin.</p>
+
+  <div class="stat-row no-break">
+    <div class="stat-box">
+      <div class="stat-num">↓31%</div>
+      <div class="stat-label">Insulin reduction during fasting window</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">5×</div>
+      <div class="stat-label">HGH increase within 24h of fasting</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">16h</div>
+      <div class="stat-label">When autophagy meaningfully activates</div>
+    </div>
+  </div>
+
+  <h3 class="section-head">The four key mechanisms</h3>
+
+  <p><strong>Insulin:</strong> The master regulator. When insulin is high, fat cells are locked — they literally cannot release fatty acids. Every time you eat, especially carbohydrates, insulin rises. The longer the window between meals, the longer insulin stays low, and the longer your body has access to its own fat stores. This is the entire mechanism of IF in one sentence.</p>
+
+  <p><strong>Autophagy:</strong> From the Greek for "self-eating." When your cells are starved of external nutrients, they begin breaking down and recycling their own damaged components — misfolded proteins, dysfunctional organelles, cellular debris. This isn't harmful; it's profoundly restorative. The 2016 Nobel Prize in Physiology was awarded for the discovery of autophagy mechanisms.</p>
+
+  <p><strong>Human Growth Hormone (HGH):</strong> HGH rises dramatically during fasting, particularly during sleep fasts. It serves a protective function — it tells your body to preserve lean muscle mass while burning fat. This is why IF, unlike chronic caloric restriction, does not cause muscle loss when done correctly.</p>
+
+  <p><strong>Ketosis (partial):</strong> During extended fasting, your liver converts fatty acids into ketone bodies — an alternative fuel for the brain and muscles. You don't need to be on a ketogenic diet to experience this. A 16-hour fast is enough to begin mild ketone production, which accounts for the mental clarity many IF practitioners report.</p>
+
+  <div class="section-divider"><span></span><div class="divider-dot"></div><span></span></div>
+
+  <h3 class="section-head">The metabolic switch: a simple analogy</h3>
+
+  <p>Think of your body as a hybrid car. It has two fuel systems: a gasoline tank (glucose from food) and an electric battery (body fat). When gasoline is available, the car uses it exclusively and never touches the battery. The moment the gasoline runs low, the car automatically switches to electric mode.</p>
+
+  <p>Constant eating keeps your gasoline tank perpetually full. Your fat stores — your battery — never get used. Intermittent fasting is simply allowing the gasoline tank to empty so the car has to switch modes. The switch takes a few days of practice to become smooth and automatic. After that, your body learns to flip between fuel sources effortlessly.</p>
+
+  <div class="science-note no-break">
+    <div class="callout-label">Science Note</div>
+    <p>A landmark 2019 review published in <em>The New England Journal of Medicine</em> (Mattson et al.) found that intermittent fasting triggers "a metabolic switch from glucose-based to ketone-based energy" which has profound effects on metabolic health, brain function, and longevity markers. The review covered over 300 studies across 25 years of research.</p>
+    <p>A separate study in <em>Cell Metabolism</em> (2019) showed that time-restricted eating of 10 hours or less produced significant reductions in weight, blood pressure, and LDL cholesterol — without any instruction to eat differently, only to change the timing.</p>
+  </div>
+
+  <h3 class="section-head">Why timing matters more than what you eat</h3>
+
+  <p>This is the part that surprises people most. IF studies consistently show metabolic benefits even when the participants eat the same food, in the same amounts — the only variable is the timing. The 2019 <em>Cell Metabolism</em> study mentioned above gave participants no dietary guidance whatsoever. They ate what they normally ate. The results — reduced body weight, better blood sugar regulation, improved sleep — came purely from compressing the eating window.</p>
+
+  <p>This doesn't mean you should eat poorly. Food quality absolutely matters for overall health. But for the specific mechanism of fat loss and metabolic reset, the timing window is the primary lever. Pull it first. The food quality refinements can come later.</p>
+
+  <div class="page-footer">
+    <span>Chapter 1 — The Science</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 2 — PROTOCOLS
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter2">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">02</div>
+    <div class="chapter-label">Chapter Two</div>
+    <h2 class="chapter-title font-playfair">Choosing Your<br />IF Protocol</h2>
+    <p class="chapter-subtitle">Four methods, one right fit — how to choose yours</p>
+  </div>
+
+  <p class="drop-cap">Intermittent fasting is not a single protocol. It's a family of approaches built on the same principle — structured periods of not eating — with different rhythms and intensities. Choosing the right method for your lifestyle is one of the most important decisions you'll make in this first month, because the best protocol is the one you'll actually do consistently.</p>
+
+  <h3 class="section-head">The four main methods</h3>
+
+  <h4 class="section-sub">16:8 — The Standard (Best for Beginners)</h4>
+  <p>Fast for 16 hours, eat within an 8-hour window. This is where 80% of beginners should start. The simplest implementation: stop eating at 8pm, skip breakfast, eat your first meal at noon. Your eating window runs 12pm–8pm. You sleep through most of the fast, making it far more manageable than it sounds. Most people find that after the first week, this feels completely natural.</p>
+
+  <h4 class="section-sub">18:6 — Intermediate</h4>
+  <p>Fast for 18 hours, eat within a 6-hour window. The natural progression once 16:8 feels effortless — typically weeks 3–4. With 18 hours of fasting, autophagy activation is deeper, fat burning is more pronounced, and many people report even clearer mental focus. The practical shift from 16:8 is simply pushing your eating window two hours later or earlier: noon to 6pm instead of noon to 8pm.</p>
+
+  <h4 class="section-sub">5:2 — The Alternative</h4>
+  <p>Eat normally five days per week. On two non-consecutive days (e.g., Monday and Thursday), consume only 500–600 calories. This is not daily time-restricted eating — it's weekly caloric patterning. It's excellent for people with irregular schedules, frequent travel, or social commitments that make daily fasting windows difficult. The results are comparable to 16:8 over time, though the day-to-day experience is different.</p>
+
+  <h4 class="section-sub">OMAD — Advanced (Not for Starting Out)</h4>
+  <p>One Meal A Day: a 23:1 fasting ratio. This is the most aggressive protocol and is not recommended for beginners. While some experienced practitioners swear by it, the adaptation demands are significant, and the social limitations are severe. If you want to eventually try OMAD, do so after at least 60 days of successful 16:8. It's listed here for completeness, not prescription.</p>
+
+  <div class="section-divider"><span></span><div class="divider-dot"></div><span></span></div>
+
+  <h3 class="section-head">Protocol comparison</h3>
+
+  <table class="protocol-table no-break">
+    <thead>
+      <tr>
+        <th>Protocol</th>
+        <th>Fast / Eat</th>
+        <th>Difficulty</th>
+        <th>Best For</th>
+        <th>Weekly Hours Fasted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-protocol">16:8 <span class="badge badge-sage">Recommended</span></td>
+        <td>16h / 8h</td>
+        <td>Low</td>
+        <td>Beginners, daily routine</td>
+        <td>112h</td>
+      </tr>
+      <tr>
+        <td class="td-protocol">18:6</td>
+        <td>18h / 6h</td>
+        <td>Medium</td>
+        <td>After 2–3 weeks on 16:8</td>
+        <td>126h</td>
+      </tr>
+      <tr>
+        <td class="td-protocol">5:2</td>
+        <td>2 days restricted</td>
+        <td>Medium</td>
+        <td>Irregular schedules</td>
+        <td>Variable</td>
+      </tr>
+      <tr>
+        <td class="td-protocol">OMAD <span class="badge badge-neutral">Advanced</span></td>
+        <td>23h / 1h</td>
+        <td>High</td>
+        <td>Experienced only</td>
+        <td>161h</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-head">How to choose based on your life</h3>
+
+  <p><strong>If you work a 9–5:</strong> 16:8 is perfect. Eat lunch at noon, eat dinner at 7pm, stop. Skip breakfast. Drink black coffee in the morning. Done.</p>
+
+  <p><strong>If you travel frequently:</strong> 5:2 is more forgiving. You can eat normally on travel days and do your restricted days when you're home and in control of your food environment.</p>
+
+  <p><strong>If you exercise in the morning:</strong> 16:8 still works — your eating window simply shifts. Eat from 10am–6pm instead. Have a protein-rich meal within an hour of finishing your workout.</p>
+
+  <p><strong>If you have a social life that involves dinner:</strong> Keep your eating window ending at 8 or 9pm. The flexibility is there.</p>
+
+  <h3 class="section-head">Sample daily schedules</h3>
+
+  <p><strong>16:8 (Standard):</strong> 8pm (night before) — last meal. 8am — wake, black coffee or tea. 12pm — first meal (break fast). 8pm — last meal. Repeat.</p>
+
+  <p><strong>18:6 (Shifted later):</strong> 7pm (night before) — last meal. 1pm — first meal. 7pm — last meal. This is a common 18:6 pattern for people who prefer an early dinner.</p>
+
+  <p><strong>5:2 (Restricted day):</strong> Normal breakfast, lunch, and dinner on five days. On two chosen days: one 300-cal meal (dinner), water and zero-calorie drinks otherwise.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">The Protocol Rule</div>
+    <p>Start with 16:8 for the first 14 days, regardless of what you've read about other methods. The adaptation phase is hard enough without added restriction. Once fasting feels routine, you can assess whether to progress to 18:6 or experiment with 5:2. Build the foundation first.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 2 — Protocols</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 3 — FIRST 7 DAYS
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter3">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">03</div>
+    <div class="chapter-label">Chapter Three</div>
+    <h2 class="chapter-title font-playfair">Your First 7 Days:<br />The Adaptation Phase</h2>
+    <p class="chapter-subtitle">What to expect, and how to push through it</p>
+  </div>
+
+  <p class="drop-cap">The first week of intermittent fasting is, for most people, the hardest. Not because fasting is physiologically dangerous — it isn't — but because your body has spent years receiving food at predictable intervals, and it has built strong hormonal habits around those patterns. Breaking those patterns takes a few days of discomfort. Here's exactly what to expect, why it happens, and how to move through it.</p>
+
+  <h3 class="section-head">What's actually happening in your body</h3>
+
+  <p>The hunger you feel in the first few days isn't necessarily real hunger — it's a conditioned response called "cephalic phase" hunger. Your body releases ghrelin (the hunger hormone) at its habitual meal times, whether or not you actually need calories. It's a learned expectation, not a physical emergency. This is critically important to understand, because it means the hunger you feel will peak, stay for about 20 minutes, and then subside — every single time. It does not keep building indefinitely.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">The Hunger Wave Technique</div>
+    <p>When hunger hits during your fasting window, do not fight it — observe it. Notice when it arrives, acknowledge it without reaction, drink a large glass of water or black coffee, and do something that requires mental focus for 15–20 minutes. Without exception, the hunger passes. This always works. The wave always breaks. Track how long it lasted each time — you'll notice it shrinking rapidly over the first week.</p>
+  </div>
+
+  <h3 class="section-head">Why days 2–4 are the hardest</h3>
+
+  <p>Day 1 is often easier than expected, fueled by novelty and motivation. Days 2–4 are where most people quit. Your glycogen stores are depleting. Your body hasn't fully shifted to fat-burning mode yet. You may experience: persistent low-grade hunger, mild headaches, slight fatigue or brain fog, irritability, and difficulty concentrating. These are all temporary and are signs that the metabolic switch is happening — not signs that something is wrong.</p>
+
+  <p>Day 5 onward tends to feel noticeably different. Most people report a distinct clarity and lightness in the morning fasted state that they don't remember feeling before. This is the point where IF stops being a struggle and starts being a lifestyle.</p>
+
+  <h3 class="section-head">Electrolytes and hydration</h3>
+
+  <p>During fasting, your kidneys excrete more sodium than usual as insulin drops. This can lead to electrolyte imbalances that cause many of the "fasting symptoms" people attribute to hunger: headaches, fatigue, muscle cramps. The solution is simple — increase your water and salt intake during fasting hours.</p>
+
+  <p>Add a pinch of high-quality sea salt to your morning water. Drink 2–3 liters of water daily. If symptoms persist past day 4, add a small amount of potassium (from a banana or supplement) and magnesium (from a supplement or leafy greens in your eating window). The famous "keto flu" and "fasting headache" are almost always electrolyte issues, not fasting problems.</p>
+
+  <h3 class="section-head">What you CAN consume during the fast</h3>
+
+  <p>The rule is simple: anything with fewer than 50 calories and no significant insulin response is generally considered "fasting-safe" in the 16:8 context. This includes:</p>
+
+  <ul>
+    <li><strong>Water</strong> — as much as you want, plain or sparkling</li>
+    <li><strong>Black coffee</strong> — plain, no milk, no sweeteners (a small amount of cinnamon is fine)</li>
+    <li><strong>Plain tea</strong> — green, black, herbal, all fine; no milk or sugar</li>
+    <li><strong>Electrolyte supplements</strong> — zero-calorie versions only</li>
+    <li><strong>Apple cider vinegar</strong> — diluted in water, does not break the fast</li>
+  </ul>
+
+  <p>Strictly avoid: milk, cream, oat milk, any sweetened drinks including diet sodas (controversial, but they can trigger cephalic insulin responses), bulletproof coffee with butter or MCT oil (breaks the fast despite claims otherwise), and any food.</p>
+
+  <div class="section-divider"><span></span><div class="divider-dot"></div><span></span></div>
+
+  <h3 class="section-head">Day-by-day guide for Week 1</h3>
+
+  <p><strong>Day 1:</strong> Set your eating window (recommend 12pm–8pm). Stop eating after 8pm. The next morning, drink black coffee or water and push your first meal to noon. Note how you feel.</p>
+  <p><strong>Day 2:</strong> The hardest morning. Hunger will peak around your usual breakfast time. Use the hunger wave technique. Drink water, get busy. It passes.</p>
+  <p><strong>Day 3–4:</strong> Peak adaptation difficulty. Expect low energy in the late morning. Keep electrolytes up. This is temporary.</p>
+  <p><strong>Day 5:</strong> Most people notice a shift. Morning hunger is less intense. Mental clarity during the fasting window starts to emerge.</p>
+  <p><strong>Day 6–7:</strong> The protocol is starting to feel manageable. The fasting window is becoming automatic rather than effortful.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">This Too Shall Pass</div>
+    <p>If you're on Day 3 and struggling, this is the moment that separates people who transform their relationship with food from people who quit and write off IF as "not for them." The discomfort of days 2–4 is physiological, predictable, and completely temporary. Day 5 feels different. Almost everyone who gets to Day 5 continues. Just get to Day 5.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 3 — The Adaptation Phase</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 4 — WHAT TO EAT
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter4">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">04</div>
+    <div class="chapter-label">Chapter Four</div>
+    <h2 class="chapter-title font-playfair">What to Eat in<br />Your Eating Window</h2>
+    <p class="chapter-subtitle">IF isn't a diet — but what you eat still matters</p>
+  </div>
+
+  <p class="drop-cap">Here's the honest truth: intermittent fasting will produce results even if you eat poorly in your eating window. The hormonal and metabolic benefits of the fasting period are real regardless of food quality, and many people achieve significant fat loss eating a completely unrestricted diet within their window. That said, food quality amplifies your results and determines how you feel — and it would be a waste to get the timing right and still feel sluggish because you're breaking your fast with a bag of chips.</p>
+
+  <h3 class="section-head">The 80/20 rule for your eating window</h3>
+
+  <p>Aim for 80% of your eating window meals to be whole, nutrient-dense food. Give yourself 20% flexibility for real life — social meals, treats, foods you actually enjoy. This isn't a purity contest. The goal is sustainable behavior change, not a six-week challenge followed by a relapse. A diet you can live with permanently — even if it's imperfect — will always outperform a perfect diet you can't sustain.</p>
+
+  <h3 class="section-head">Best foods to break a fast</h3>
+
+  <p>After 16+ hours of fasting, your digestive system has been at rest and your insulin is at its lowest. The first meal you eat will trigger the largest insulin spike of the day. For this reason, leading with protein and fat before carbohydrates is a smart strategy — it blunts the insulin response and keeps you satiated longer.</p>
+
+  <p><strong>Excellent first-meal choices:</strong> eggs (any preparation), Greek yogurt, cottage cheese, salmon or other fatty fish, nuts and nut butters, avocado, leafy green salads with olive oil, whole grains (oats, quinoa) in moderate portions.</p>
+
+  <p><strong>Avoid breaking the fast with:</strong> large portions of refined carbohydrates, sugary foods, processed breakfast cereals, fruit juice, or alcohol. These cause a rapid insulin spike followed by a crash that will leave you hungry and low-energy within an hour.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">Tip: The First Meal Formula</div>
+    <p>Protein + healthy fat + fiber = the ideal fast-breaking meal. A simple example: two eggs scrambled in olive oil with half an avocado and a handful of spinach. Takes 8 minutes to make, keeps you full for 4–5 hours, and starts the eating window on a metabolically stable footing.</p>
+  </div>
+
+  <h3 class="section-head">Meal timing within the window</h3>
+
+  <p>Most people on 16:8 eat two meals and possibly a small snack. A common structure: a substantial first meal (lunch) at noon, a small snack around 3–4pm if needed, and a dinner at 6–7pm, stopping by 8pm. You don't need to eat for the entire 8 hours — there's no advantage to grazing throughout the window. Two or three intentional meals work better for blood sugar stability and satiety than continuous snacking.</p>
+
+  <h3 class="section-head">Simple meal ideas that require no cooking skills</h3>
+
+  <ul>
+    <li><strong>Fast meal 1:</strong> Canned salmon + rice cakes + sliced cucumber + olive oil drizzle</li>
+    <li><strong>Fast meal 2:</strong> Greek yogurt (full fat) + handful of walnuts + a few blueberries</li>
+    <li><strong>Fast meal 3:</strong> Rotisserie chicken + bagged salad + olive oil + lemon</li>
+    <li><strong>Fast meal 4:</strong> Eggs any style + avocado toast on sourdough</li>
+    <li><strong>Fast meal 5:</strong> Cottage cheese + tomatoes + olive oil + salt</li>
+  </ul>
+
+  <h3 class="section-head">How to handle social eating and restaurants</h3>
+
+  <p>This is where most people think IF falls apart. It doesn't have to. The key insight: your eating window is flexible. A dinner reservation at 7pm doesn't break your protocol — it just means your window that day might be 2pm–9pm instead of 12pm–8pm. Shift the window to fit the event. The total fasting duration is what matters, not the specific hours.</p>
+
+  <p>At restaurants: prioritize protein and vegetables. Eat slowly. Have one drink if you want one. Don't make your eating protocol a dinner-table topic — simply order what works and enjoy the company. IF is designed to fit into a real life, not the other way around.</p>
+
+  <div class="science-note no-break">
+    <div class="callout-label">Science Note</div>
+    <p>A 2020 study in <em>Nutrients</em> found that the composition of the meal used to break a fast significantly impacts subsequent hunger and energy levels. Protein-rich break-fast meals resulted in lower ghrelin levels (hunger hormone) for up to five hours post-meal compared to carbohydrate-rich break-fast meals — supporting the "protein first" approach for the eating window's opening meal.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 4 — What to Eat</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 5 — EXERCISE
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter5">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">05</div>
+    <div class="chapter-label">Chapter Five</div>
+    <h2 class="chapter-title font-playfair">Exercise &amp; IF:<br />The Perfect Combination</h2>
+    <p class="chapter-subtitle">How to move smarter — not more</p>
+  </div>
+
+  <p class="drop-cap">One of the most liberating things about intermittent fasting is what it reveals about exercise. For years, the fitness industry has told us that weight loss requires long, frequent, intense workouts. IF challenges this assumption directly. The metabolic work happening during your fasting window — the fat oxidation, the hormonal shifts, the cellular repair — does not require exercise to be effective. But when you add movement strategically, the results compound in ways that neither approach achieves alone.</p>
+
+  <h3 class="section-head">Fasted cardio: the honest take</h3>
+
+  <p>Fasted cardio — exercising during your fasting window, typically in the morning — has a genuine advantage: your glycogen stores are depleted and insulin is low, so your body is already primed to burn fat as fuel. Studies show modestly higher fat oxidation rates during fasted vs. fed cardio for low-to-moderate intensity exercise.</p>
+
+  <p>The caveat: for high-intensity or long-duration exercise, the performance tradeoff matters. If you're doing a gentle 30-minute walk or a light jog, fasted is fine and potentially beneficial. If you're doing a 45-minute HIIT class or a 10km run, you may find your performance suffers, and the performance loss may outweigh the fat-burning advantage.</p>
+
+  <p><strong>The simple rule:</strong> Low-to-moderate intensity cardio (walking, cycling, light jogging) → fasted is great. Strength training and high-intensity cardio → better performed in your eating window, within 1–2 hours of a protein-containing meal.</p>
+
+  <h3 class="section-head">Best timing for different goals</h3>
+
+  <p><strong>Maximum fat burning:</strong> Light cardio (walk, cycle) in the last 2–3 hours of your fasting window, just before you break fast. Insulin is at its lowest. Fat oxidation is at its peak.</p>
+
+  <p><strong>Muscle building / strength maintenance:</strong> Resistance training within 1–3 hours after your first meal of the eating window. Blood amino acids are available, HGH is still elevated from the fast, and insulin is at a moderate level that supports protein synthesis without being so high it suppresses fat burning.</p>
+
+  <p><strong>Energy and daily movement:</strong> Walking after meals is underrated. A 10–20 minute walk after your main meal dramatically improves postprandial blood glucose control and contributes to daily caloric expenditure without stress on the body.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">How Much Exercise Do You Actually Need?</div>
+    <p>Less than the fitness industry would have you believe. For the purposes of supporting IF results, 150 minutes of moderate movement per week is sufficient. That's three 30-minute walks, five 20-minute walks, or two 45-minute gym sessions. IF does the heavy metabolic lifting. Exercise enhances and accelerates — it doesn't carry the program on its own.</p>
+  </div>
+
+  <h3 class="section-head">Maintaining energy during fasted workouts</h3>
+
+  <p>If you choose to exercise while fasting, energy management is straightforward. Black coffee 30 minutes before exercise is a proven and legal ergogenic aid — it increases fat oxidation and reduces perceived effort. Electrolytes (especially sodium and potassium) before and during exercise prevent the fatigue and cramping that some fasted exercisers experience. And keeping the workout duration under 45 minutes when fasted means you're working in a zone where your body can sustain performance without needing dietary glucose.</p>
+
+  <p>If you feel consistently depleted during fasted workouts after the first two weeks — not just on day 3 — consider shifting your workout to your eating window. The protocol should work around your life, not the other way around.</p>
+
+  <h3 class="section-head">Recovery, sleep, and the IF advantage</h3>
+
+  <p>Sleep is the most underrated recovery tool available to you — and IF has an unexpected benefit here. Many practitioners report significant improvements in sleep quality, typically beginning in week 2. The proposed mechanism: lower evening insulin levels mean less metabolic work during sleep, lower core body temperature, and better melatonin expression.</p>
+
+  <p>Sleep is also when HGH is most active — which means that IF's HGH-elevating effect and your sleep window are reinforcing each other every single night. Getting 7–9 hours of sleep while doing IF isn't a luxury recommendation; it's a physiological amplifier. More sleep, with IF, means more overnight fat burning and more cellular repair. It's the combination that makes the 30-day results feel almost too good to be true.</p>
+
+  <div class="science-note no-break">
+    <div class="callout-label">Science Note</div>
+    <p>A 2017 study in the <em>Journal of Translational Medicine</em> compared time-restricted eating combined with resistance training against resistance training alone. The IF + training group lost significantly more fat mass while maintaining lean mass compared to the training-only group — despite consuming the same total calories. The conclusion: IF and exercise have synergistic effects beyond what either produces independently.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 5 — Exercise &amp; IF</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 6 — TROUBLESHOOTING
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter6">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">06</div>
+    <div class="chapter-label">Chapter Six</div>
+    <h2 class="chapter-title font-playfair">Troubleshooting:<br />When Things Go Wrong</h2>
+    <p class="chapter-subtitle">Every problem has a solution — here are all of them</p>
+  </div>
+
+  <p class="drop-cap">Intermittent fasting is not plug-and-play. Real life creates friction — your schedule changes, your hunger spikes, the scale stops moving, your sleep goes strange. These are not signs that IF doesn't work for you. They're signs that you need to adjust one variable. This chapter is your diagnostic guide: every common problem, and its specific, actionable solution.</p>
+
+  <div class="section-divider"><span></span><div class="divider-dot"></div><span></span></div>
+
+  <div class="problem-solution no-break">
+    <div class="problem">❯ "I'm too hungry — I can't make it to my eating window"</div>
+    <div class="solution">
+      <strong>Week 1–2:</strong> This is normal adaptation hunger. Use the hunger wave technique (page 13). Drink large amounts of water, black coffee, or tea. Distraction works — genuinely. Schedule the hardest fasting hours during focused work time.<br/>
+      <strong>Week 3+:</strong> If hunger is still intense, check your eating window. Are you eating enough protein and fat? Low-protein meals cause earlier return of hunger. Also check whether you're eating in the evening — late-night eating can disrupt morning hunger patterns.<br/>
+      <strong>Quick fix:</strong> Add one extra cup of black coffee or green tea in the late morning fasting window. Both suppress appetite meaningfully without breaking the fast.
+    </div>
+  </div>
+
+  <div class="problem-solution no-break">
+    <div class="problem">❯ "I have no energy — I feel wiped out all day"</div>
+    <div class="solution">
+      Almost always an electrolyte issue. Add a pinch of sea salt to your morning water. Increase magnesium (supplement or more leafy greens). Increase potassium (banana, avocado, sweet potato in your eating window).<br/>
+      If electrolytes are fine: assess sleep. Are you getting 7+ hours? Sleep deprivation mimics fasting fatigue. Are you eating enough total calories in your eating window? Severe caloric restriction on top of IF is unsustainable — eat to satiety.
+    </div>
+  </div>
+
+  <div class="problem-solution no-break">
+    <div class="problem">❯ "I'm not losing weight — the scale isn't moving"</div>
+    <div class="solution">
+      First: Are you in week 1? The first week often shows water weight fluctuation, not fat loss. Real fat loss becomes visible from week 2–3.<br/>
+      If you've been at it for 3+ weeks: assess your eating window. Are you eating beyond satiety? IF doesn't override a large caloric surplus. Are you drinking alcohol regularly in your eating window? Alcohol halts fat oxidation for 12–24 hours.<br/>
+      Plateau after initial loss: try shifting from 16:8 to 18:6 for 2 weeks. Extend the fasting window. Add a 20-minute walk after your largest meal. Reassess sleep quality — poor sleep elevates cortisol, which directly inhibits fat loss.
+    </div>
+  </div>
+
+  <div class="problem-solution no-break">
+    <div class="problem">❯ "I can't sleep — I'm lying awake at night"</div>
+    <div class="solution">
+      Most common cause: eating too close to bedtime. Your last meal should be at least 2–3 hours before you intend to sleep. Eating late keeps digestion and metabolism active during what should be a rest window.<br/>
+      Second cause: hunger keeping you awake. If you're genuinely hungry at bedtime, your eating window may need to shift later or your last meal needs more protein and fat to sustain satiety overnight. A small handful of nuts or a protein-rich snack 30 minutes before the window closes can prevent this.
+    </div>
+  </div>
+
+  <div class="problem-solution no-break">
+    <div class="problem">❯ "I keep binge eating in my window — I eat way too much"</div>
+    <div class="solution">
+      This is one of the most common problems, and it has a simple root cause: the eating window feels like a reward after the fast, and restriction-then-release is a psychologically familiar pattern from previous diets.<br/>
+      The fix: break your fast with a large, protein-rich meal — not a snack. Protein aggressively suppresses ghrelin (the hunger hormone) and prevents the "eating everything in sight" mode. Eat slowly and without screens. Give your leptin (satiety hormone) the 15–20 minutes it needs to register fullness. If you're consistently overeating, extend your eating window by 1 hour temporarily — it reduces the urgency.
+    </div>
+  </div>
+
+  <h3 class="section-head">Understanding and breaking a plateau</h3>
+
+  <p>A plateau — no change in weight for 2+ weeks despite consistency — is not a failure. It's your body adapting. The metabolic rate adjusts to a new normal. Plateaus are broken by changing one variable: the length of the fasting window, the total number of active days per week, the composition of meals, sleep duration, or exercise intensity. You don't need to change everything. You need to change one thing meaningfully, assess for two weeks, and adjust again.</p>
+
+  <div class="callout no-break">
+    <div class="callout-label">When to adjust your protocol</div>
+    <p>The signal to adjust is not frustration — it's consistent data. If you've been fully consistent for 3 weeks and see zero change in weight, energy, or body composition, that's the signal to step up the protocol (16:8 → 18:6) or add a second variable. If you've been inconsistent, the fix is consistency, not protocol change.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 6 — Troubleshooting</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     CHAPTER 7 — 30-DAY BLUEPRINT
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="chapter7">
+  <div class="chapter-header">
+    <div class="chapter-number-watermark">07</div>
+    <div class="chapter-label">Chapter Seven</div>
+    <h2 class="chapter-title font-playfair">The 30-Day Blueprint</h2>
+    <p class="chapter-subtitle">Week by week — exactly what to do and when</p>
+  </div>
+
+  <p class="drop-cap">This is the operational chapter. Everything you've read up to this point is context. This is the action. The four-week structure below gives you a clear, progressive path from beginner to confident intermittent faster — with weekly focus areas, daily checklists, and measurable milestones. Follow it in sequence. Don't skip weeks. The progression is intentional.</p>
+
+  <div class="week-block no-break">
+    <div class="week-label">Week 1 — Days 1–7: Foundation</div>
+    <p style="font-size:0.88rem;margin-bottom:0.75rem;color:rgba(26,15,10,0.7);">Protocol: <strong>14:10</strong> — Fast 14h, eat in a 10h window. Focus on building the habit, not perfection.</p>
+    <ul class="checklist">
+      <li>Set your eating window (e.g., 10am–8pm) and write it down</li>
+      <li>Stop eating after your window closes — no exceptions</li>
+      <li>Drink 2+ liters of water daily, add a pinch of sea salt to morning water</li>
+      <li>Black coffee or plain tea are your morning allies — use them</li>
+      <li>Don't change what you eat yet — just the timing</li>
+      <li>Use the hunger wave technique for every fasting hunger pang</li>
+      <li>Track how you feel each day — energy, hunger, mood — in one line</li>
+    </ul>
+    <p style="font-size:0.82rem;font-style:italic;color:rgba(26,15,10,0.45);margin-top:0.5rem;">Milestone: Complete all 7 days without breaking the fast before your window opens.</p>
+  </div>
+
+  <div class="week-block no-break">
+    <div class="week-label">Week 2 — Days 8–14: The Standard</div>
+    <p style="font-size:0.88rem;margin-bottom:0.75rem;color:rgba(26,15,10,0.7);">Protocol: <strong>16:8</strong> — Shift to 16h fast. This is your primary protocol for the rest of the month.</p>
+    <ul class="checklist">
+      <li>Shift your eating window to 12pm–8pm (or equivalent 8h window)</li>
+      <li>Begin prioritizing protein at your first meal of the day</li>
+      <li>Add a 20-minute walk at any point in the day — this is your only exercise requirement</li>
+      <li>Optimize meal timing: two substantial meals + optional small snack</li>
+      <li>Add one electrolyte-rich food daily (avocado, leafy greens, nuts)</li>
+      <li>Assess sleep — aim for 7+ hours; IF results are significantly better with adequate sleep</li>
+      <li>Note when hunger stops feeling like a crisis and starts feeling manageable</li>
+    </ul>
+    <p style="font-size:0.82rem;font-style:italic;color:rgba(26,15,10,0.45);margin-top:0.5rem;">Milestone: 16:8 feels like a default, not a discipline. Hunger in the fasting window is a wave, not a wall.</p>
+  </div>
+
+  <div class="week-block no-break">
+    <div class="week-label">Week 3 — Days 15–21: Optimization</div>
+    <p style="font-size:0.88rem;margin-bottom:0.75rem;color:rgba(26,15,10,0.7);">Protocol: <strong>16:8</strong> — Same window, higher quality. Add light exercise. Stop tracking weight.</p>
+    <ul class="checklist">
+      <li>Maintain 16:8 — do not change the window yet</li>
+      <li>Improve eating window quality: aim for 80% whole foods</li>
+      <li>Add 2–3 sessions of deliberate movement (walks, gym, yoga — any)</li>
+      <li>Stop weighing yourself daily — weigh once at the start of week 3 and once at end</li>
+      <li>Track energy and clothing fit instead of scale weight</li>
+      <li>Experiment with breaking your fast with a protein-only meal — note hunger for the next 4h</li>
+      <li>If 16:8 feels effortless, try 18:6 for one or two days this week as a test</li>
+    </ul>
+    <p style="font-size:0.82rem;font-style:italic;color:rgba(26,15,10,0.45);margin-top:0.5rem;">Milestone: You've built a habit. Energy is noticeably different from Day 1. Eating window feels natural.</p>
+  </div>
+
+  <div class="week-block no-break">
+    <div class="week-label">Week 4 — Days 22–30: Assessment &amp; Decision</div>
+    <p style="font-size:0.88rem;margin-bottom:0.75rem;color:rgba(26,15,10,0.7);">Protocol: <strong>16:8 or 18:6</strong> — Based on your Week 3 assessment, choose your next phase.</p>
+    <ul class="checklist">
+      <li>Decide: stay at 16:8, progress to 18:6, or try one 5:2 week — based on your data</li>
+      <li>Take measurements (waist, hips) rather than relying solely on scale</li>
+      <li>Add a second exercise session per week if not already doing so</li>
+      <li>Plan your post-30-day protocol: IF is not a 30-day challenge, it's a permanent lifestyle</li>
+      <li>Identify your biggest ongoing challenge (hunger, social eating, exercise) — make a plan</li>
+      <li>On Day 30: write down three changes you've noticed in how you feel, not just how you look</li>
+    </ul>
+    <p style="font-size:0.82rem;font-style:italic;color:rgba(26,15,10,0.45);margin-top:0.5rem;">Milestone: 30 days complete. You know what works for your body and you have a permanent protocol.</p>
+  </div>
+
+  <div class="callout no-break">
+    <div class="callout-label">Beyond 30 Days</div>
+    <p>The 30-day blueprint establishes the foundation. After Day 30, the goal is lifelong maintenance with deliberate flexibility. Allow yourself 2–3 "off days" per month — social events, holidays, vacations — without guilt or protocol anxiety. Return to your baseline window the next day. That's it. That's how IF becomes a permanent, sustainable part of your life rather than another cycle of discipline and collapse.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Chapter 7 — The 30-Day Blueprint</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     BONUS — IF CHEAT SHEET
+════════════════════════════════════════════════════ -->
+<div class="page chapter-break" id="bonus">
+
+  <div class="bonus-header">
+    <div class="bonus-eyebrow">Bonus Reference</div>
+    <h2>IF Cheat Sheet</h2>
+    <p>Quick reference card — print this page separately and keep it somewhere visible</p>
+  </div>
+
+  <div class="cheat-col">
+
+    <!-- Card 1: Protocols -->
+    <div class="cheat-card">
+      <div class="cheat-title">Fasting Hours by Protocol</div>
+      <ul>
+        <li><span class="ci">→</span><span><strong>14:10</strong> — 14h fast / 10h eat. Week 1 starter.</span></li>
+        <li><span class="ci">→</span><span><strong>16:8</strong> — 16h fast / 8h eat. The standard.</span></li>
+        <li><span class="ci">→</span><span><strong>18:6</strong> — 18h fast / 6h eat. Intermediate.</span></li>
+        <li><span class="ci">→</span><span><strong>5:2</strong> — Normal 5 days / 500 cal × 2 days.</span></li>
+        <li><span class="ci">→</span><span><strong>OMAD</strong> — 23h fast / 1h eat. Advanced only.</span></li>
+      </ul>
+    </div>
+
+    <!-- Card 2: What breaks a fast -->
+    <div class="cheat-card">
+      <div class="cheat-title">What Breaks Your Fast</div>
+      <ul>
+        <li><span class="cx">✕</span><span>Any food (solid or liquid with calories)</span></li>
+        <li><span class="cx">✕</span><span>Milk, cream, oat milk, any dairy in coffee</span></li>
+        <li><span class="cx">✕</span><span>Sweetened drinks (juice, soda, sweet tea)</span></li>
+        <li><span class="cx">✕</span><span>Bulletproof coffee (butter/MCT oil)</span></li>
+        <li><span class="cx">✕</span><span>Protein shakes or BCAAs</span></li>
+        <li><span class="ci">✓</span><span>Water (plain or sparkling)</span></li>
+        <li><span class="ci">✓</span><span>Black coffee (plain only)</span></li>
+        <li><span class="ci">✓</span><span>Plain tea (no milk, no sweetener)</span></li>
+        <li><span class="ci">✓</span><span>Zero-cal electrolytes</span></li>
+        <li><span class="ci">✓</span><span>ACV in water (diluted)</span></li>
+      </ul>
+    </div>
+
+    <!-- Card 3: Hunger emergency -->
+    <div class="cheat-card">
+      <div class="cheat-title">Hunger Emergency Toolkit</div>
+      <ul>
+        <li><span class="ci">1.</span><span>Drink a large glass of water immediately</span></li>
+        <li><span class="ci">2.</span><span>Make black coffee or brew green tea</span></li>
+        <li><span class="ci">3.</span><span>Time the hunger: it will peak and pass in ~20 min</span></li>
+        <li><span class="ci">4.</span><span>Switch to focused work or a phone call</span></li>
+        <li><span class="ci">5.</span><span>Add a pinch of salt to your water if feeling weak</span></li>
+        <li><span class="ci">6.</span><span>Go for a 10-minute walk outside</span></li>
+        <li><span class="ci">7.</span><span>Remember: Day 5 feels different. Get there.</span></li>
+      </ul>
+    </div>
+
+    <!-- Card 4: Apps -->
+    <div class="cheat-card">
+      <div class="cheat-title">Best Apps to Track Fasting</div>
+      <ul>
+        <li><span class="ci">→</span><span><strong>Zero</strong> — Clean, simple timer. Free. Best for beginners.</span></li>
+        <li><span class="ci">→</span><span><strong>Life Fasting Tracker</strong> — Community features, detailed stats.</span></li>
+        <li><span class="ci">→</span><span><strong>Fastic</strong> — Guided programs, habit tracking.</span></li>
+        <li><span class="ci">→</span><span><strong>Simple</strong> — Combines IF tracking with food logging.</span></li>
+        <li><span class="ci">→</span><span><strong>Apple Clock / Phone timer</strong> — No app needed. Set a timer for your fasting end. That's it.</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Full-width key reminders -->
+  <div style="margin-top:1.5rem;background:#1a0f0a;border-radius:12px;padding:1.25rem 1.5rem;">
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c4622d;margin-bottom:0.75rem;">The 5 Rules to Remember</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 2rem;">
+      <div style="font-size:0.82rem;color:rgba(247,243,238,0.8);padding:0.3rem 0;border-bottom:1px solid rgba(247,243,238,0.08);">01. The fast starts when you stop eating — not at midnight</div>
+      <div style="font-size:0.82rem;color:rgba(247,243,238,0.8);padding:0.3rem 0;border-bottom:1px solid rgba(247,243,238,0.08);">02. Hunger peaks and passes — it never keeps climbing</div>
+      <div style="font-size:0.82rem;color:rgba(247,243,238,0.8);padding:0.3rem 0;border-bottom:1px solid rgba(247,243,238,0.08);">03. One bad day is nothing — start again tomorrow</div>
+      <div style="font-size:0.82rem;color:rgba(247,243,238,0.8);padding:0.3rem 0;border-bottom:1px solid rgba(247,243,238,0.08);">04. Sleep is half the protocol — protect it</div>
+      <div style="font-size:0.82rem;color:rgba(247,243,238,0.8);padding:0.3rem 0;">05. This is a lifestyle — not a 30-day challenge</div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem;text-align:center;padding-top:1rem;border-top:1px solid rgba(26,15,10,0.1);">
+    <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:rgba(26,15,10,0.5);margin:0;">Your body was built for this. You just needed the blueprint.</p>
+    <p style="font-size:0.75rem;color:rgba(26,15,10,0.35);margin-top:0.5rem;margin-bottom:0;">yourwebsite.com · The Intermittent Fasting Blueprint · 2025 Edition</p>
+  </div>
+
+  <div class="page-footer">
+    <span>Bonus — IF Cheat Sheet</span>
+    <span>The IF Blueprint · yourwebsite.com</span>
+  </div>
+</div>
+
+</body>
+</html>
